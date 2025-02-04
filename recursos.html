@@ -56,13 +56,13 @@
             
             if(name !== "" && description !== "" && author !== "") {
                 let newItem = document.createElement("div");
-                newItem.classList.add("bg-gray-200", "p-4", "rounded-lg", "shadow-md", "transition", "duration-300", "transform", "hover:scale-105");
+                newItem.classList.add("bg-gray-200", "p-4", "rounded-lg", "shadow-md", "flex", "flex-col");
                 newItem.innerHTML = `
                     <div class="bg-gray-400 h-32 mb-4 rounded"></div>
                     <h3 class="text-lg font-semibold">${name}</h3>
                     <p class="text-sm text-gray-700">${description}</p>
                     <p class="text-sm text-gray-500">Autor: ${author}</p>
-                    <a href='#' class='text-blue-500 hover:underline mt-2 inline-block'>Descargar</a>
+                    <a href='#' class='mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105'>Descargar</a>
                 `;
                 resourcesList.appendChild(newItem);
                 
