@@ -12,8 +12,8 @@
         Chat
     </header>
     
-    <div class="container mx-auto mt-10 p-6 flex-grow flex">
-        <div class="w-1/4 bg-white shadow-lg rounded-lg p-6 mr-4">
+    <div class="container mx-auto mt-10 p-6 flex-grow flex flex-col md:flex-row">
+        <div class="w-full md:w-1/4 bg-white shadow-lg rounded-lg p-6 mb-4 md:mb-0 md:mr-4">
             <h2 class="text-xl font-semibold mb-4 text-center p-4 bg-sky-500 rounded-lg text-white">Contactos</h2>
             <ul id="contactList" class="space-y-4">
                 <li class="cursor-pointer p-4 bg-gray-100 rounded-lg hover:bg-sky-200 transition flex items-center" data-contact="fabiocanavaro">
@@ -47,17 +47,17 @@
                 <!-- Agregar más contactos según sea necesario -->
             </ul>
         </div>
-        <div class="w-3/4 bg-white shadow-lg rounded-lg p-6 hidden" id="chatContainer">
+        <div class="w-full md:w-3/4 bg-white shadow-lg rounded-lg p-6 hidden" id="chatContainer">
             <h2 class="text-xl font-semibold mb-4" id="chatTitle">Mensajería Interna</h2>
-            <div class="border p-4 h-64 overflow-y-auto bg-gray-50 rounded-lg" id="chatBox">
+            <div class="border p-4 h-64 md:h-96 overflow-y-auto bg-gray-50 rounded-lg" id="chatBox">
                 <p class="text-sm text-gray-600" id="noMessages">No hay mensajes aún.</p>
             </div>
-            <div class="mt-4 flex">
-                <input type="text" id="chatInput" class="border flex-grow p-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un mensaje...">
-                <button id="sendBtn" class="bg-blue-500 text-white px-6 py-3 rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Enviar</button>
+            <div class="mt-4 flex flex-col sm:flex-row">
+                <input type="text" id="chatInput" class="border flex-grow p-3 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe un mensaje...">
+                <button id="sendBtn" class="bg-blue-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-b-lg sm:rounded-r-lg sm:rounded-b-none hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base">Enviar</button>
             </div>
         </div>
-        <div class="w-3/4 bg-white shadow-lg rounded-lg p-6 flex items-center justify-center" id="selectChatMessage">
+        <div class="w-full md:w-3/4 bg-white shadow-lg rounded-lg p-6 flex items-center justify-center" id="selectChatMessage">
             <p class="text-gray-600">Por favor, selecciona un contacto para iniciar el chat.</p>
         </div>
     </div>
