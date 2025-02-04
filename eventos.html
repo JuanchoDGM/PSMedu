@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Plataforma Educativa</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-gray-100 font-poppins">
+    <header class="bg-purple-600 text-white p-4 text-center text-2xl font-bold shadow-md">
+        Eventos Académicos
+    </header>
+    
+    <div class="container mx-auto mt-6 p-4">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Próximos Eventos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="eventsList">
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                    <h3 class="text-lg font-semibold cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        Conferencia de Robótica
+                        <span class="ml-2 transition-transform transform rotate-0">&#9660;</span>
+                    </h3>
+                    <p class="text-sm text-gray-700">11 de marzo</p>
+                    <div class="hidden mt-2 text-sm text-gray-600">
+                        <p>Detalles del evento de robótica.</p>
+                        <p>Ubicación: Cancha</p>
+                        <p>Hora: 11:00 AM</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                    <h3 class="text-lg font-semibold cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        Conferencia de Innovación
+                        <span class="ml-2 transition-transform transform rotate-0">&#9660;</span>
+                    </h3>
+                    <p class="text-sm text-gray-700">15 de marzo</p>
+                    <div class="hidden mt-2 text-sm text-gray-600">
+                        <p>Detalles del evento de innovación.</p>
+                        <p>Ubicación: Auditorio Principal</p>
+                        <p>Hora: 10:00 AM</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                    <h3 class="text-lg font-semibold cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        Taller de Programación
+                        <span class="ml-2 transition-transform transform rotate-0">&#9660;</span>
+                    </h3>
+                    <p class="text-sm text-gray-700">22 de marzo</p>
+                    <div class="hidden mt-2 text-sm text-gray-600">
+                        <p>Detalles del taller de programación.</p>
+                        <p>Ubicación: Sala de Computo</p>
+                        <p>Hora: 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                    <h3 class="text-lg font-semibold cursor-pointer flex justify-between items-center" onclick="toggleDetails(this)">
+                        Feria de Proyectos
+                        <span class="ml-2 transition-transform transform rotate-0">&#9660;</span>
+                    </h3>
+                    <p class="text-sm text-gray-700">5 de abril</p>
+                    <div class="hidden mt-2 text-sm text-gray-600">
+                        <p>Detalles de la feria de proyectos.</p>
+                        <p>Ubicación: Patio Central</p>
+                        <p>Hora: 9:00 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDetails(element) {
+            let details = element.nextElementSibling.nextElementSibling;
+            let arrow = element.querySelector("span");
+            if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+                arrow.classList.add("rotate-180");
+            } else {
+                details.classList.add("hidden");
+                arrow.classList.remove("rotate-180");
+            }
+        }
+    </script>
+</body>
+</html>

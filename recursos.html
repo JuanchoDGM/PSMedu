@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Plataforma Educativa</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-gray-100 font-poppins">
+    <header class="bg-green-600 text-white p-4 text-center text-2xl font-bold shadow-md">
+        Recursos Educativos
+    </header>
+    
+    <div class="container mx-auto mt-6 p-4">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Biblioteca Virtual</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resourcesList">
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Libro 1</h3>
+                    <p class="text-sm text-gray-700">Descripción del libro 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Tesis 2</h3>
+                    <p class="text-sm text-gray-700">Descripción de la tesis 2.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 2</p>
+                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Proyecto 3</h3>
+                    <p class="text-sm text-gray-700">Descripción del proyecto 3.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 3</p>
+                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+            </div>
+            <div class="mt-6">
+                <input type="text" id="resourceName" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Nombre del recurso...">
+                <input type="text" id="resourceDescription" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Descripción del recurso...">
+                <input type="text" id="resourceAuthor" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Autor del recurso...">
+                <button id="addResourceBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full transition duration-300">Agregar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("addResourceBtn").addEventListener("click", () => {
+            let name = document.getElementById("resourceName").value.trim();
+            let description = document.getElementById("resourceDescription").value.trim();
+            let author = document.getElementById("resourceAuthor").value.trim();
+            let resourcesList = document.getElementById("resourcesList");
+            
+            if(name !== "" && description !== "" && author !== "") {
+                let newItem = document.createElement("div");
+                newItem.classList.add("bg-gray-200", "p-4", "rounded-lg", "shadow-md", "transition", "duration-300", "transform", "hover:scale-105");
+                newItem.innerHTML = `
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">${name}</h3>
+                    <p class="text-sm text-gray-700">${description}</p>
+                    <p class="text-sm text-gray-500">Autor: ${author}</p>
+                    <a href='#' class='text-blue-500 hover:underline mt-2 inline-block'>Descargar</a>
+                `;
+                resourcesList.appendChild(newItem);
+                
+                document.getElementById("resourceName").value = "";
+                document.getElementById("resourceDescription").value = "";
+                document.getElementById("resourceAuthor").value = "";
+            } else {
+                alert("Por favor, completa todos los campos.");
+            }
+        });
+    </script>
+</body>
+</html>
