@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,147 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="src/output.css">
 </head>
+
 <body class="bg-gradient-to-r from-green-100 to-green-300 font-poppins">
-    <header class="bg-green-600 text-white p-4 text-center text-2xl font-bold shadow-md">
+    <header
+        class="bg-green-600 text-white p-4 text-center text-2xl font-bold shadow-md flex items-center justify-center">
+        <img src="img/logo.png" alt="Logo de la Institución" class="h-10 mr-2 bg-white p-1">
         Recursos Educativos
     </header>
-    
+
     <div class="container mx-auto mt-6 p-4">
         <div class="bg-white shadow-lg rounded-lg p-6">
             <h2 class="text-xl font-semibold mb-4">Biblioteca Virtual</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resourcesList">
+
+            <h3 class="text-lg font-semibold mb-2">Ing. de Sistemas</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resourcesListSistemas">
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
                     <div class="bg-gray-400 h-32 mb-4 rounded"></div>
                     <h3 class="text-lg font-semibold">Libro 1</h3>
                     <p class="text-sm text-gray-700">Descripción del libro 1.</p>
                     <p class="text-sm text-gray-500">Autor: Autor 1</p>
-                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Tesis 1</h3>
+                    <p class="text-sm text-gray-700">Descripción de la tesis 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Proyecto 1</h3>
+                    <p class="text-sm text-gray-700">Descripción del proyecto 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+
+            </div>
+
+            <h3 class="text-lg font-semibold mb-2 mt-6">Ing. Industrial</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resourcesListIndustrial">
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Libro 2</h3>
+                    <p class="text-sm text-gray-700">Descripción de la tesis 2.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 2</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
                 </div>
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
                     <div class="bg-gray-400 h-32 mb-4 rounded"></div>
                     <h3 class="text-lg font-semibold">Tesis 2</h3>
-                    <p class="text-sm text-gray-700">Descripción de la tesis 2.</p>
-                    <p class="text-sm text-gray-500">Autor: Autor 2</p>
-                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                    <p class="text-sm text-gray-700">Descripción de la tesis 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
                 </div>
+
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Proyecto 2</h3>
+                    <p class="text-sm text-gray-700">Descripción del proyecto 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-semibold mb-2 mt-6">Ing. Química</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resourcesListQuimica">
                 <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
                     <div class="bg-gray-400 h-32 mb-4 rounded"></div>
                     <h3 class="text-lg font-semibold">Proyecto 3</h3>
                     <p class="text-sm text-gray-700">Descripción del proyecto 3.</p>
                     <p class="text-sm text-gray-500">Autor: Autor 3</p>
-                    <a href="#" class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Tesis 3</h3>
+                    <p class="text-sm text-gray-700">Descripción de la tesis 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
+                </div>
+
+                <div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col">
+                    <div class="bg-gray-400 h-32 mb-4 rounded"></div>
+                    <h3 class="text-lg font-semibold">Libro 3</h3>
+                    <p class="text-sm text-gray-700">Descripción del proyecto 1.</p>
+                    <p class="text-sm text-gray-500">Autor: Autor 1</p>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105">Descargar</a>
                 </div>
             </div>
-            <div class="mt-6">
-                <input type="text" id="resourceName" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Nombre del recurso...">
-                <input type="text" id="resourceDescription" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Descripción del recurso...">
-                <input type="text" id="resourceAuthor" class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Autor del recurso...">
-                <button id="addResourceBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full transition duration-300">Agregar</button>
+
+            <div class="mt-10 md:w-2/4 md:mx-auto">
+                <h3 class="text-lg font-semibold mb-2 mt-6">Agregar recurso</h3>
+                <input type="text" id="resourceName"
+                    class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                    placeholder="Nombre del recurso...">
+                <input type="text" id="resourceDescription"
+                    class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                    placeholder="Descripción del recurso...">
+                <input type="text" id="resourceAuthor"
+                    class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                    placeholder="Autor del recurso...">
+                <select id="resourceCareer"
+                    class="border w-full p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="sistemas">Ing. de Sistemas</option>
+                    <option value="industrial">Ing. Industrial</option>
+                    <option value="quimica">Ing. Química</option>
+                </select>
+                <button id="addResourceBtn"
+                    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full transition duration-300">Agregar</button>
             </div>
         </div>
     </div>
-    
+
     <script>
         document.getElementById("addResourceBtn").addEventListener("click", () => {
             let name = document.getElementById("resourceName").value.trim();
             let description = document.getElementById("resourceDescription").value.trim();
             let author = document.getElementById("resourceAuthor").value.trim();
-            let resourcesList = document.getElementById("resourcesList");
-            
-            if(name !== "" && description !== "" && author !== "") {
+            let career = document.getElementById("resourceCareer").value;
+            let resourcesList;
+
+            if (career === "sistemas") {
+                resourcesList = document.getElementById("resourcesListSistemas");
+            } else if (career === "industrial") {
+                resourcesList = document.getElementById("resourcesListIndustrial");
+            } else if (career === "quimica") {
+                resourcesList = document.getElementById("resourcesListQuimica");
+            }
+
+            if (name !== "" && description !== "" && author !== "") {
                 let newItem = document.createElement("div");
                 newItem.classList.add("bg-gray-200", "p-4", "rounded-lg", "shadow-md", "flex", "flex-col");
                 newItem.innerHTML = `
@@ -65,7 +159,7 @@
                     <a href='#' class='mt-4 px-4 py-2 bg-green-700 rounded-lg text-center text-white w-2/4 mx-auto transition duration-300 transform hover:scale-105'>Descargar</a>
                 `;
                 resourcesList.appendChild(newItem);
-                
+
                 document.getElementById("resourceName").value = "";
                 document.getElementById("resourceDescription").value = "";
                 document.getElementById("resourceAuthor").value = "";
@@ -75,4 +169,5 @@
         });
     </script>
 </body>
+
 </html>
